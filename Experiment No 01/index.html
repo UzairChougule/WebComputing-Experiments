@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Anjuman-I-Islam's Kalsekar Technical Campus | Rayyan Tausalkar
+    </title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>Anjuman-I-Islam's Kalsekar Technical Campus</h1>
+      <p>Experiment 1 - Web Computing Lab</p>
+    </header>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#departments">Departments</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="image-banner">
+      <img
+        src="./images/AIKTC.jpeg"
+        alt="A banner image of the college campus"
+      />
+    </div>
+
+    <main>
+      <section id="home">
+        <h2>Home</h2>
+        <p>
+          Welcome to Our College. This is the official website for our college.
+          Explore our departments, facilities, and contact us for more
+          information.
+        </p>
+        <p>
+          This single page contains all the required elements for Experiment 1,
+          including a table, lists, and a contact form. Use the navigation bar
+          above to jump to the different sections.
+        </p>
+      </section>
+
+      <section id="departments">
+        <h2>Departments</h2>
+        <p>We offer a variety of courses across several departments.</p>
+        <table>
+          <tr>
+            <th>Department Name</th>
+            <th>Head of Department</th>
+            <th>E-Mail</th>
+          </tr>
+          <tr>
+            <td>Computer Science & Engineering (AIML)</td>
+            <td>Dr. Salim Shaikh</td>
+            <td>aiml@aiktc.ac.in</td>
+          </tr>
+          <tr>
+            <td>Computer Science & Engineering (AIML)</td>
+            <td>Dr. Tabassum Mukhadam</td>
+            <td>ds@aiktc.ac.in</td>
+          </tr>
+          <tr>
+            <td>Computer Engineering</td>
+            <td>Dr. Tabrez</td>
+            <td>co@aiktc.ac.in</td>
+          </tr>
+          <tr>
+            <td>Civil Engineering</td>
+            <td>Prof. Nadeem Khan</td>
+            <td>ce@aiktc.ac.in</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="facilities">
+        <h2>Facilities</h2>
+
+        <p>General Facilities (Unordered List):</p>
+        <ul>
+          <li>Central Library</li>
+          <li>Wi-Fi Enabled Campus</li>
+          <li>Cafeteria</li>
+          <li>Sports Ground</li>
+          <li>Auditorium</li>
+        </ul>
+
+        <p>Departmental Labs - Computer Science (Ordered List):</p>
+        <ol>
+          <li>Data Structures Lab</li>
+          <li>Operating Systems Lab</li>
+          <li>Database Management Lab</li>
+          <li>Artificial Intelligence Lab</li>
+        </ol>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Please fill out the form below to get in touch with us.</p>
+
+        <form onsubmit="return handleSubmit(event)">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            required
+            placeholder="Enter your full name"
+          />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            required
+            placeholder="Enter your email address"
+          />
+
+          <label for="msg">Message:</label>
+          <textarea
+            id="msg"
+            rows="4"
+            required
+            placeholder="Write your message..."
+          ></textarea>
+
+          <button type="submit">Send Message</button>
+          <button type="reset">Clear</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      Created by <strong>Rayyan Tausalkar</strong> | Roll No:
+      <strong>23AI62</strong> | Batch: <strong>03</strong>
+    </footer>
+
+    <script>
+      function handleSubmit(e) {
+        e.preventDefault();
+        const name = document.getElementById("name").value;
+        alert(`Thank you, ${name}! Your message has been sent successfully.`);
+        e.target.reset();
+        return false;
+      }
+    </script>
+  </body>
+</html>
